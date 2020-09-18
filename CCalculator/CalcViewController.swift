@@ -10,8 +10,8 @@ import UIKit
 
 class CalcViewController: UIViewController {
     
-    var inputScreenNumber: Double = 0
-    var zeroScreenNumber: Double = 0
+    var firstValue: Double = 0
+    var secondValue: Double = 0
     var mathSign: Bool = false
     
     @IBOutlet weak var result: UILabel!
@@ -19,7 +19,7 @@ class CalcViewController: UIViewController {
     @IBAction func numberTap(_ sender: UIButton) {
         if mathSign == true {
         result.text = result.text! + String(sender.tag)
-        inputScreenNumber = Double(result.text!)!
+        firstValue = Double(result.text!)!
     }
     }
    
